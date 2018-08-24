@@ -1,0 +1,57 @@
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+.mat-checkbox-layout {
+  white-space: normal !important;
+}
+
+.mat-checkbox-layout .mat-checkbox-label {
+  text-align: left;
+}
+
+.mat-checkbox-inner-container{
+  margin-top: 0px !important;
+}
+
+.mat-input-element:disabled{
+  color: #b0b0b0 !important;
+}
+
+.mat-form-field-suffix{
+  color: #b0b0b0 !important;
+}
+
+.mat-form-field, .mat-option, .mat-select, .mat-radio-button { font-family: 'Open Sans' !important; }
+.mat-checkbox { font-family: 'Open Sans' !important; font-size:11px;}
+mat-checkbox.mat-checkbox-popup{font-size:initial;}
+mat-checkbox.mat-checkbox-custom .mat-checkbox-layout .mat-checkbox-label{ line-height: 16px  }
+mat-checkbox.mat-checkbox-custom .mat-checkbox-layout .mat-checkbox-inner-container{ margin-right: 23px !important;}
+
+@media only screen and (min-width:750px){
+  mat-checkbox.mat-checkbox-custom .mat-checkbox-layout .mat-checkbox-inner-container{ margin-right: 29px !important;}
+  mat-checkbox.mat-checkbox-custom .mat-checkbox-layout .mat-checkbox-label{ line-height: 18px  }
+}
+
+@include mat-core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://www.google.com/design/spec/style/color.html
+// $primary: mat-palette($mat-grey,900,800,700);
+$accent:  mat-palette($mat-amber, A200, A100, A700);
+$primary:  mat-palette($mat-teal, A700, A400, A200);
+
+// The warn palette is optional (defaults to red).
+$warn:    mat-palette($mat-red);
+
+
+// Create the theme object (a Sass map containing all of the palettes).
+$theme: mat-light-theme($primary, $accent,  $warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($theme);

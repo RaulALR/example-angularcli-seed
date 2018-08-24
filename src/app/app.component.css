@@ -1,0 +1,13 @@
+.main{
+    padding: 20px; 
+    width:500px
+}
+.avatar{
+/*background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
+   */
+   background-image: url('https://quienmanda.s3.amazonaws.com/uploads/avatar/10667/logo.jpg');
+   background-size: cover;
+
+    
+}
+
