@@ -85,4 +85,4 @@ export class MyHammerConfig extends HammerGestureConfig {
   ],
   bootstrap: [Component],
 })
-export class LobModule { }
+export class LibModule { }

@@ -1,4 +1,4 @@
-import { LobModule } from './app/lib/module';
+import { LibModule } from './app/lib/module';
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -8,5 +8,5 @@ if (environment.production) {
   enableProdMode();
 }
 
-platformBrowserDynamic().bootstrapModule(LobModule)
+platformBrowserDynamic().bootstrapModule(LibModule)
   .catch(err => console.log(err));
